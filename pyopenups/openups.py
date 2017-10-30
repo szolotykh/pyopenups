@@ -1,8 +1,10 @@
 # Import
 from ctypes import *
+import os
 
 # ============= Load DLL=============
-openups = cdll.LoadLibrary("../bin/OpenUPSLib.dll")
+path_to_dll = os.path.dirname(os.path.realpath(__file__)) + "/../bin/OpenUPSLib.dll"
+openups = cdll.LoadLibrary(path_to_dll)
 
 # UPSOpenDevice
 # Open UPS via HID (opens fist one if more connected)

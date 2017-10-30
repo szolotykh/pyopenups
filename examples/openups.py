@@ -20,7 +20,7 @@ if ups_open_device(1000):
 	print " VBAT: {}".format(get_ups_vbat())
 	print " VOut: {}".format(get_ups_vout())
 	print " ACharge: {}".format(get_ups_ccharge())
-	print " ADischg: {}".format(get_ups_cdischarge())
+	print " ADischarge: {}".format(get_ups_cdischarge())
 	print " AIn: {}".format(get_ups_cin())
 	print " Temp: {}".format(get_ups_temperature())
 	print " VCell{"
@@ -28,4 +28,4 @@ if ups_open_device(1000):
 		print "  [{0}] = {1}".format(i ,get_ups_vcell(i))
 	print " }"
 	
-	ups_close_device();
+	ups_close_device()
